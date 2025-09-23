@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/layout_list_item.dart';
+import 'package:flutter_application_1/spaced_list.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "applikasi flutter",
-      home: listt(),
+      home: SpacedList(),
     );
   }
 }

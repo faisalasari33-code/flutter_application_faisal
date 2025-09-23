@@ -7,58 +7,114 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-            'PROFILE DATA',
-            style: TextStyle(color: Colors.teal),
+        title: Text(
+          'Profil Saya',
+          style: TextStyle(
+            fontFamily: 'title',
+            fontSize: 25,
+            color: Colors.white,
           ),
-          backgroundColor: Colors.greenAccent),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          CircleAvatar(
-            radius: 100,
-            backgroundImage: AssetImage('images/fto.jpg'),
-          ),
-        
-          Text(
-            'PROFILE SAYA ',
-            style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.black54),
-          ),
-          Text(
-            'Nama : Faisal Asari',
-            style: TextStyle(fontSize: 25, color: Colors.greenAccent),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            'Kelas : XI RPL 2',
-            style: TextStyle(fontSize: 25, color: Colors.black87),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Column(
-                children: [Icon(Icons.call), Text('call')],
-              ),
-              Column(
-                children: [Icon(Icons.map), Text('map')],
-              ),
-              Column(
-                children: [Icon(Icons.share), Text('share')],
-              )
-            ],
-          )
-        ],
+        ),
+        backgroundColor: const Color.fromARGB(255, 0, 81, 255),
       ),
-    );
-  }
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: 40),
+
+            Center(
+              child: Container(
+                width: 120,
+                height: 120,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: const Color.fromARGB(255, 0, 87, 218), width: 3),
+                ),
+                child: ClipOval(
+                  child: Image.asset('aset/abi.png', fit: BoxFit.cover),
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Column(
+              children: [
+                Text(
+                  'Faisal asari',
+                  style: TextStyle(
+                    fontFamily: 'font1',
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Murid SMK YPC Tasikmalaya',
+                  style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Jurusan RPL',
+                  style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 8),
+                Text('Umur 16 Tahun',
+                style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                ),
+                SizedBox(height: 8),
+                Text('Alamat mangunreja',
+                style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                )
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton.icon(
+                  icon: Icon(Icons.call),
+                  label: Text('CALL'),
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Color.fromARGB(255, 0, 81, 255),
+                    backgroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                  ),
+                  onPressed: () {
+                    
+                  },
+                ),
+                SizedBox(width: 20),
+                ElevatedButton.icon(
+                  icon: Icon(Icons.map),
+                  label: Text('ROUTE'),
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Color.fromARGB(255, 0, 81, 255),
+                    backgroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                  ),
+                  onPressed: () {
+                  },
+                ),
+                SizedBox(width: 20),
+
+                ElevatedButton.icon(
+                  icon: Icon(Icons.share),
+                  label: Text('SHARE'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    foregroundColor: Color.fromARGB(255, 0, 81, 255),
+                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                  ),
+                  onPressed: () {
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+     ),
+);
+}
 }

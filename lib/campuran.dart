@@ -7,7 +7,7 @@ class Campuran extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('list daan gridview'),
+        title: Text('list dan gridview'),
         backgroundColor: const Color.fromARGB(255, 0, 162, 255),
       ),
       body: ListView(
@@ -19,54 +19,101 @@ class Campuran extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
+
           ListTile(
             leading: Icon(Icons.map),
             title: Text('Map'),
           ),
           ListTile(
-            leading: Icon(Icons.photo_album),
-            title: Text('Album'),
+            leading: Icon(Icons.view_agenda_rounded),
+            title: Text('Road'),
           ),
           ListTile(
-            leading: Icon(Icons.phone),
-            title: Text('Phone'),
+            leading: Icon(Icons.photo_album),
+            title: Text('View'),
           ),
+
           Padding(
             padding: EdgeInsets.all(12),
             child: Text(
-              'Warna Horizotal:',
+              'Map:',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
+
           SizedBox(
             height: 150,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 SizedBox(width: 10),
-                Image.asset('images/1.jpg', width: 150, fit: BoxFit.cover),
-                SizedBox(width: 10),
-                Image.asset('images/2.jpg', width: 150, fit: BoxFit.cover),
-                SizedBox(width: 10),
-                Image.asset('images/3.jpg', width: 150, fit: BoxFit.cover),
-                SizedBox(width: 10),
-                Image.asset('images/4.jpg', width: 150, fit: BoxFit.cover),
-                SizedBox(width: 10),
-                Image.asset('iamges/5.jpg', width: 150, fit: BoxFit.cover),
+                Image.asset('aset/petalabubu.png' , width: 150, fit : BoxFit.cover),
               ],
             ),
           ),
+
+
           Padding(
             padding: EdgeInsets.all(12),
             child: Text(
-              'Grid Item:',
+              'Road:',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
+
+          SizedBox(
+            height: 150,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget> [
+                SizedBox(width: 10),
+                Image.asset('aset/labubu1.png', width: 150, fit: BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/labubu2.png', width: 150, fit : BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/labubu3.png', width: 150, fit : BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/labubu4.png', width: 150, fit : BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/labubu5.png', width: 150, fit : BoxFit.cover),
+              ],
+            ),
+          ),
+
+           Padding(
+            padding: EdgeInsets.all(12),
+            child: Text(
+              'View:',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+
+          SizedBox(
+            height: 150,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget> [
+                SizedBox(width: 10),
+                Image.asset('aset/naruto.png', width: 150, fit: BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/naruto2.png', width: 150, fit : BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/naruto3.png', width: 150, fit : BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/sasuke.png', width: 150, fit : BoxFit.cover),
+                SizedBox(width: 10),
+                Image.asset('aset/naruto.png', width: 150, fit : BoxFit.cover),
+              ],
+            ),
+          ),
+
+
+        
+
           GridView.count(
             crossAxisCount: 2,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true, 
+            physics: NeverScrollableScrollPhysics(), 
             children: List.generate(20, (index) {
               return Center(
                 child: Text(

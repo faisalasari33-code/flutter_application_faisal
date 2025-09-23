@@ -19,3 +19,12 @@ flutter:
   uses-material-design: true
   assets:
   - aset/image.png
+  - aset/onyet.png
+  - aset/abi.png
+  - aset/labubu1.png
+  - aset/labubu2.png
+  - aset/labubu3.png
+  - aset/labubu4.png
+  - aset/labubu5.png
+  - aset/peta.png
+  - aset/petalabubu.png
