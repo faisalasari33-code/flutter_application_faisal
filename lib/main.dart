@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/latihan1.dart';
+import 'package:flutter_application_1/latihan_state.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "applikasi flutter",
-      home: Latihan1(),
+      home: LatihanState(),
     );
   }
 }
